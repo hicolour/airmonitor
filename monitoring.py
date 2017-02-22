@@ -7,7 +7,6 @@ import sys
 import statsd
 from struct import *
 
-#c = statsd.StatsClient('138.68.92.164', 8125, prefix='com.prochera.pm.bielsko.out')
 
 debug=0
 # work for pms3003
@@ -20,7 +19,6 @@ class g3sensor():
     def __init__(self):
         if debug: print "init"
 	self.endian = sys.byteorder
-    	#self.sc = statsd.StatsClient('138.68.92.164', 8125, prefix='com.prochera.pm.bielsko.out')
     def conn_serial_port(self, device):
         if debug: print device
         self.serial = serial.Serial(device, baudrate=9600)
